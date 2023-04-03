@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PigDuck's Game</title>
+
+        <link rel="stylesheet" href="game.css" />
+        <script src="pigDuck.js" defer></script>
+    </head>
+    <body>
+
+       <h2>NOT FOR THE EASILY INSULTED OR FAINT OF HEART</h2>
+
+        <div class="game">
+            <h1>PigDuck's Game</h1>
+            <section class="header">
+                <div id="PigDuck">
+                    <img src="PigDuck.png">
+                </div>
+                <div id="speechbubble">
+                    <img src="bubble.png">
+                    <p id="response">Go ahead. Make your move.</p>
+                </div>
+            </section>
+
+            <div class="board-container">
+                <div class="board" data-dimension="4"></div>
+                <div class="win">You won!</div>
+            </div>
+            <div class="controls">
+                <div class="stats">
+                    <div class="moves">0 moves</div>
+                    <div class="timer">time: 0 sec</div>
+                    <button>Begin</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

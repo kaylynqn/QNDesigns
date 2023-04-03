@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>qndesigns.art</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-26MPYMNP2R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-26MPYMNP2R');
+</script>
+
+<body>
+
+    <header>
+        <nav id="large">
+            <img src="images/Logo.svg" class="logo" alt="Logo"/>
+            <a class="button" href="http://www.qndesigns.art/index.html">Home</a>
+            <a class="button" href="http://www.qndesigns.art/about.html">About</a>
+            <a class="button" href="http://www.qndesigns.art/shop.html">Shop</a>
+            <a class="button" href="http://www.qndesigns.art/portfolio.html">Portfolio</a>
+            <a class="button" href="http://www.qndesigns.art/contact.html">Contact</a>
+        </nav>
+
+        <nav id="small" role="navigation">
+            <img src="images/Logo.svg" class="logo" alt="Logo"/>
+            <div id="menuToggle">
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <a href="http://www.qndesigns.art/index.html"><li>Home</li></a>
+                <a href="http://www.qndesigns.art/about.html"><li>About</li></a>
+                <a href="http://www.qndesigns.art/shop.html"><li>Shop</li></a>
+                <a href="http://www.qndesigns.art/portfolio.html"><li>Portfolio</li></a>
+                <a href="http://www.qndesigns.art/contact.html"><li>Contact</li></a>
+              </ul>
+            </div>
+          </nav>
+    </header>
+
+
+<!-- <picture>
+    <source media="(min-width: 500px)" srcset="images/HeaderPhoto800px.jpg">
+    <source media="(min-width: 800px)" srcset="images/HeaderPhoto1200px.jpg">
+    <source media="(min-width: 500px)" srcset="images/HeaderPhoto.jpg">
+    <img src="images/HeaderPhotoSmall500px.jpg" alt="Header Photo">
+</picture> -->
+
+<div class="scroll-container">
+    <div class="scroll-page" id="page-1">
+        <h6>Graphic Design</h6>
+    </div>
+    <div class="scroll-page" id="page-2">
+        <h6>Web Design</h6>
+    </div>
+    <div class="scroll-page" id="page-3">
+        <h6>Fine Art</h6>
+    </div>
+  </div>
+
+<section class="about">
+    <img src="images/Myface.jpg" alt="Picture of Me">
+   <div id="text">
+    <h1>About</h1>
+    <p>Hi! My name is Kaylyn Kuehn. I grew up near Bozeman, MT. Since I can remember, I've always loved painting and drawing. When I was in high school, I found a way to apply creativity into the business world with graphic design. I took as many classes as I could and even had the opportunity of visiting Dallas, TX and Anaheim, CA during the Business Professionals of America Nationals competitions. After graduating high school, I moved to Coeur d'Alene to study Graphic and Web Design at North Idaho College.</p>
+    </div>
+</section>
+
+<section class="mywork">
+    <div id="shop">
+    <img src="images/Shop.jpg" alt="Barn Owl">
+    <a class=button2 href="http://www.kuehndesigns.com/shop.html">Visit my Shop</a>
+    </div>
+    <div id="portfolio">
+    <img src="images/Portfolio.jpg" alt="Peacock Illustration">
+    <a class=button2 href="http://www.kuehndesigns.com/portfolio.html">Look at my Portfolio</a>
+    </div>
+
+</section>
+
+<footer>
+    <p>@kaylyn_qn</p>
+</footer>
+
+<style>
+    .mywork img {
+        width: 250px;
+    }
+    .mywork img {
+        display: block;
+        width: 10%;
+        border-radius: 50px;
+    }
+    .mywork img:hover {
+        transform: scale(1.02);
+    }
+</style>
+
+<script>
+    document.addEventListener('contextmenu',function(e){e.preventDefault();e.stopPropagation();});
+    document.addEventListener('copy',function(e){e.preventDefault();e.stopPropagation();});
+    document.addEventListener('cut',function(e){e.preventDefault();e.stopPropagation();});
+    var my_image = document.img("my_image");
+my_image.img("draggable", false);
+
+if (my_image.addEventListener) {
+   my_image.addEventListener("mousemove", function(e) { return false });
+} else if (my_image.attachEvent) {
+   my_image.attachEvent("onmousemove", function(e) { return false });
+}
+    </script>
+</body>

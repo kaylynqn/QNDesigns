@@ -125,8 +125,10 @@ button {
 
 .card {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 20vw;
+    height: 20vw;
+    max-width: 100px;
+    max-height: 100px;
     cursor: pointer;
 }
 
@@ -181,3 +183,4 @@ button {
 .highlight {
     color: #76C485;
 }
+

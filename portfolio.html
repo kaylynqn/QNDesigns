@@ -70,68 +70,50 @@
       </div>
 
 
-    <section class="mywork">
-    <div id="slideshow" data-component="slideshow">
-        <div role="list">
-            <div class="slide">
-                <img src="images/Portfolio.jpg" alt="Peacock Illustration">
-            </div>
-            <div class="slide">
-                <img src="images/AboutMe.jpg" alt="About Me Poster">
-            </div>
-            <div class="slide">
-                <img src="images/Mermaid.jpg" alt="Mermaid">
-            </div>
-            <div class="slide">
-                <img src="images/Futura.jpg" alt="Futura">
-            </div>
-            <div class="slide">
-                <img src="images/Quote.jpg" alt="Quote">
-            </div>
-            <div class="slide">
-                <img src="images/GraphicDesign.jpg" alt="Graphic Design Poster">
-            </div>
-            <div class="slide">
-                <img src="images/MoviePoster.jpg" alt="Movie Poster">
-            </div>
-            <div class="slide">
-                <img src="images/WebHome.jpg" alt="Project Rain Home Page">
-            </div>
-            <div class="slide">
-                <img src="images/BCs.jpg" alt="Business Cards">
-            </div>
-            <div class="slide">
-                <img src="images/Geyser.jpg" alt="The Geyser Newspaper">
-            </div>
-            <div class="slide">
-                <img src="images/Bees.jpg" alt="Secret Life of Bees Poster">
-            </div>
-            <div class="slide">
-                <img src="images/MrPHS.jpg" alt="Mr. PHS">
-            </div>
-            <div class="slide">
-                <img src="images/Owl.jpg" alt="Owl">
-            </div>
-            <div class="slide">
-                <img src="images/BPA2019.jpg" alt="2019 BPA Poster">
-            </div>
-            <div class="slide">
-                <img src="images/BPA2020.jpg" alt="2020 BPA Poster">
-            </div>
-            <div class="slide">
-                <img src="images/Mascot.jpg" alt="Wild Dog Mascot">
-            </div>
-            <div class="slide">
-                <img src="images/Mascot2.jpg" alt="Wild Dog Mascot with Name">
-            </div>
-            <div class="slide">
-                <img src="images/AlienInvasion.jpg" alt="Alien Invasion">
-            </div>
-            <div class="slide">
-                <img src="images/Shllameep.jpg" alt="Shllameep">
-            </div>
-        </div>
-    </div>  
+      <div class="mosaic-grid">
+        <img data-src="portfolio/TexasMalone.jpg" class="mosaic-img">
+        <img data-src="portfolio/TMad1.jpg" class="mosaic-img">
+        <img data-src="portfolio/TMad2.jpg" class="mosaic-img">
+        <img data-src="portfolio/TMad3.jpg" class="mosaic-img">
+        <img data-src="portfolio/TMad4.jpg" class="mosaic-img">
+        <img data-src="portfolio/styleGuide.jpg" class="mosaic-img">
+        <img data-src="portfolio/businessPackage.jpg" class="mosaic-img">
+        <img data-src="portfolio/QNlogo.jpg" class="mosaic-img">
+        <img data-src="portfolio/maskot.jpg" class="mosaic-img">
+        <img data-src="portfolio/TMlogo.jpg" class="mosaic-img">
+        <img data-src="portfolio/Guinanlogo.jpg" class="mosaic-img">
+        <img data-src="portfolio/brsLogo.jpg" class="mosaic-img">
+        <img data-src="portfolio/projectRainLogo.jpg" class="mosaic-img">
+        <img data-src="portfolio/myCards1.jpg" class="mosaic-img">
+        <img data-src="portfolio/myCards2.jpg" class="mosaic-img">
+        <img data-src="portfolio/myCards3.jpg" class="mosaic-img">
+        <img data-src="portfolio/myCards4.jpg" class="mosaic-img">
+        <img data-src="portfolio/aboutmePoster.jpg" class="mosaic-img">
+        <img data-src="portfolio/graphicdesignPoster.jpg" class="mosaic-img">
+        <img data-src="portfolio/quotePoster.jpg" class="mosaic-img">
+        <img data-src="portfolio/futuraPoster.jpg" class="mosaic-img">
+        <img data-src="portfolio/moviePoster.jpg" class="mosaic-img">
+        <img data-src="portfolio/festivalPoster.jpg" class="mosaic-img">
+        <img data-src="portfolio/ebookcover.jpg" class="mosaic-img">
+        <img data-src="portfolio/brsprocess.jpg" class="mosaic-img">
+        <img data-src="portfolio/greendotlogo.jpg" class="mosaic-img">
+        <img data-src="portfolio/greendotsticker1.jpg" class="mosaic-img">
+        <img data-src="portfolio/greendotsticker2.jpg" class="mosaic-img">
+        <img data-src="portfolio/greendotposter1.jpg" class="mosaic-img">
+        <img data-src="portfolio/greendotposter2.jpg" class="mosaic-img">
+        <img data-src="portfolio/greendotposter3.jpg" class="mosaic-img">
+        <img data-src="portfolio/SpiceologyNewsletter.jpg" class="mosaic-img">
+        <img data-src="portfolio/realestateads.jpg" class="mosaic-img">
+        <img data-src="portfolio/packaging.jpg" class="mosaic-img">
+        <img data-src="portfolio/waterapp.jpg" class="mosaic-img">
+        <img data-src="portfolio/typographycards.jpg" class="mosaic-img">
+        <img data-src="portfolio/infocard.jpg" class="mosaic-img">
+        <img data-src="portfolio/goatsticker1.jpg" class="mosaic-img">
+        <img data-src="portfolio/goatsticker2.jpg" class="mosaic-img">
+        <img data-src="portfolio/flowerstickers.jpg" class="mosaic-img">
+        <!-- ... -->
+      </div>
+      
     
     </section>
 
@@ -186,6 +168,30 @@ if (my_image.addEventListener) {
 } else if (my_image.attachEvent) {
    my_image.attachEvent("onmousemove", function(e) { return false });
 }
-    </script>
+   
+//  Mosaic/Lazy Images  
+const images = document.querySelectorAll('.mosaic-img');
+const options = {
+  rootMargin: '0px',
+  threshold: 0.5
+};
+
+const observer = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.setAttribute('src', img.dataset.src);
+      img.classList.add('fade-in');
+      observer.unobserve(img);
+    }
+  });
+}, options);
+
+images.forEach(image => {
+  observer.observe(image);
+});
+
+
+</script>
 
 </body>
